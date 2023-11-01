@@ -137,7 +137,7 @@ const roomSchema: Schema = new Schema({
       user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
-        required: true,
+        required: false,
       },
       ratings: {
         type: Number,
@@ -152,7 +152,7 @@ const roomSchema: Schema = new Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
-    required: true,
+    required: false,
   },
   createdAt: {
     type: Date,
