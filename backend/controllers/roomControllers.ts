@@ -2,8 +2,12 @@ import { NextRequest, NextResponse } from "next/server";
 import Room from "../models/room";
 
 export const allRooms = async (req: NextRequest) => {
+  const resPerPage: number = 8;
+  const rooms = await Room.find();
   return NextResponse.json({
-    data: "hello Rooms",
+    success: true,
+    resPerPage,
+    rooms,
   });
 };
 
