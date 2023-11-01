@@ -97,5 +97,6 @@ export const deleteRoom = async (
 
   return NextResponse.json({
     success: true,
+    message: "Room Deleted Succesfully",
   });
 };
