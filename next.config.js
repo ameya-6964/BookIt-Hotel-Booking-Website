@@ -5,7 +5,12 @@ const nextConfig = {
     DB_LOCAL_URI: "mongodb://127.0.0.1:27017/bookit-v2",
   },
   images: {
-    domains: ["res.cloudinary.com"],
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "res.cloudinary.com",
+      },
+    ],
   },
 };
 
