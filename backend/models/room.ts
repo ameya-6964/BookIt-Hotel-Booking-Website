@@ -41,7 +41,7 @@ export interface IRoom extends Document {
   user: mongoose.Schema.Types.ObjectId;
   createdAt: Date;
 }
-const roomSchema: Schema = new Schema({
+const roomSchema: Schema<IRoom> = new Schema({
   name: {
     type: String,
     required: [true, "Please Enter Room Name"],
@@ -127,10 +127,7 @@ const roomSchema: Schema = new Schema({
   category: {
     type: String,
     required: [true, "Please Enter Room Category"],
-    enum: {
-      values: ["King", "Single", "Twins"],
-      message: ["Please Select Correct Category For Room"],
-    },
+    enum: ["King", "Single", "Twins"],
   },
   reviews: [
     {
