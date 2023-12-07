@@ -71,6 +71,7 @@ const Login = () => {
             type="submit"
             className="btn form-btn w-100 py-2"
             disabled={loading}
+            style={{ backgroundColor: "#e61e4d", color: "#fff" }}
           >
             {loading ? <ButtonLoader /> : "LOGIN"}
           </button>
