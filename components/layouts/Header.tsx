@@ -7,8 +7,6 @@ import React from "react";
 const Header = () => {
   const { data } = useSession();
 
-  console.log(data);
-
   const logoutHandler = () => {
     signOut();
   };
