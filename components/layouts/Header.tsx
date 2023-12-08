@@ -9,7 +9,6 @@ import React, { useEffect } from "react";
 const Header = () => {
   const dispatch = useAppDispatch();
   const { user } = useAppSelector((state) => state.auth);
-  console.log(user);
 
   const { data } = useSession();
 

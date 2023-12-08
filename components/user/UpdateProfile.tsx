@@ -51,6 +51,7 @@ const UpdateProfile = () => {
     const userData = { name, email };
 
     updateProfile(userData);
+    toast.success("User Details Updated");
   };
 
   return (
@@ -91,6 +92,7 @@ const UpdateProfile = () => {
             type="submit"
             className="btn form-btn w-100 py-2"
             disabled={isLoading}
+            style={{ backgroundColor: "#e61e4d", color: "#fff" }}
           >
             {isLoading ? <ButtonLoader /> : "UPDATE"}
           </button>
